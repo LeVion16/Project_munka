@@ -1,5 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
     background-color: #191970;
+    font-family: "Bitter", serif;
+}
+
+img{
+    width: 90%;
+    border-radius: 5px;
+    height: 250px;      /* FIX magasság*/
+    object-fit: cover;  /* levágja a széleket*/
+    object-position: center; 
 }
 
 .nav{
@@ -7,6 +22,10 @@ body{
     backdrop-filter: blur(10px);
     border-radius: 0 0 50px 50px;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 15rem;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 .nav-item {
@@ -17,7 +36,6 @@ body{
   padding: 20px 20px;
   color: #ffffff;
   cursor: pointer;
-  transition: all 0.3s ease;
 }
 
 .label {
@@ -29,47 +47,105 @@ a{
     color: white;
 }
 
-/* Eltünteti a felesleges nyilat */
-.dropdown-toggle::after {
-    display: none !important;
-}
-
-/* Biztosítja, hogy az ikon és a szöveg egymás alatt legyen */
-.nav-item-belso {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-}
-
-/* A lenyíló ablak sötét háttere */
-.dropdown-menu-dark {
-    background-color: #191970;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Keressük meg az utolsó linket a nav-on belül és toljuk el */
 .nav a:last-child {
     margin-left: auto;
 }
 
-/* body{
+.card {
+    width: 25rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    padding: 1rem;
+    color: white;
+    transition: 0.3s ease;
+    background-color: #0f0f44;
+    border-style: solid;
+    border-width: .2rem;
+    border-color: rgba(255, 255, 255, 0.384);
+}
+
+main{
+    width: 85%;
+    margin: 0 auto;
+}
+
+.info-container {
+    transition: transform 0.4s;
+    transform: translateY(60px); /* Alaphelyzetben lejjebb van tolva a gombbal */
+}
+
+.buy-btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background: #ffe869;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0; /* Alapból láthatatlan */
+    transition: 0.3s;
+}
+
+.card:hover .info-container {
+    transform: translateY(0); /* Felcsúszik az eredeti helyére */
+}
+
+.card:hover .buy-btn {
+    opacity: 1; /* Megjelenik a gomb */
+}
+
+.card:hover {
+    box-shadow: 0 0 20px rgba(255, 232, 105, 0.4);
+}
+
+.card_img{
     display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  height: 100vh;
-  margin: 0;
-  font-family: sans-serif;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
 }
 
-.nav {
-  display: flex;
-  background: rgba(255, 255, 255, 0.1); /* Enyhén áttetsző fehér */
-  backdrop-filter: blur(10px); /* Üveghatás (Glassmorphism) */
-  padding: 10px 20px;
-  border-radius: 50px; /* Ettől lesz kapszula alakú */
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  margin-bottom: 20px;
+footer{
+    margin-top: 10rem;
 }
 
- */
+@media (max-width: 500px) {
+    .nav {
+        margin-bottom: 2rem; 
+        border-radius: 0 0 20px 20px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .nav-item {
+        padding: 10px 5px;
+        min-width: 60px;
+    }
+
+    .nav-item i {
+        font-size: 1.2rem;
+    }
+
+    .label {
+        font-size: 10px;
+        margin-top: 2px;
+    }
+
+    .nav a:last-child {
+        margin-left: 0;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
