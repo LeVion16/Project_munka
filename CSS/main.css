@@ -1,3 +1,75 @@
 body{
     background-color: #191970;
 }
+
+.nav{
+    background: rgba(255, 255, 255, 0.1); /* Enyhén áttetsző fehér */
+    backdrop-filter: blur(10px);
+    border-radius: 0 0 50px 50px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 20px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.label {
+  font-size: 12px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+/* Eltünteti a felesleges nyilat */
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+/* Biztosítja, hogy az ikon és a szöveg egymás alatt legyen */
+.nav-item-belso {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+/* A lenyíló ablak sötét háttere */
+.dropdown-menu-dark {
+    background-color: #191970;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Keressük meg az utolsó linket a nav-on belül és toljuk el */
+.nav a:last-child {
+    margin-left: auto;
+}
+
+/* body{
+    display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100vh;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.nav {
+  display: flex;
+  background: rgba(255, 255, 255, 0.1); /* Enyhén áttetsző fehér */
+  backdrop-filter: blur(10px); /* Üveghatás (Glassmorphism) */
+  padding: 10px 20px;
+  border-radius: 50px; /* Ettől lesz kapszula alakú */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 20px;
+}
+
+ */
