@@ -9,15 +9,39 @@ body{
     font-family: "Bitter", serif;
 }
 
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15rem;
+    box-shadow: 12px 12px 10px rgba(0, 0, 0, 0.7);
+}
+
+h1{
+    color: white;
+}
+
+.title{
+    background: rgba(255, 255, 255, 0.1); /* Enyhén áttetsző fehér */
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 10rem;
+}
+
 main{
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
+a{
+    text-decoration: none;
+    color: rgba(0, 0, 0); /* Enyhén áttetsző fehér */
+}
+
 div{
-    background: rgba(255, 255, 255, 0.1); /* Enyhén áttetsző fehér */
-    backdrop-filter: blur(10px);
+    background-color: #ffe869;
     border-radius: 5px;
     padding: .5rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -54,27 +78,6 @@ input{
     border-left: 2px solid white; 
     height: 300px;              
     margin: 0;                  
-}
-
-.nav {
-  display: flex;
-  background: rgba(255, 255, 255, 0.1); /* Enyhén áttetsző fehér */
-  backdrop-filter: blur(10px); /* Üveghatás (Glassmorphism) */
-  padding: 10px 20px;
-  border-radius: 50px; /* Ettől lesz kapszula alakú */
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  margin-bottom: 20px;
-}
-
-.nav-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 20px;
-  color: #a0a0a0;
-  cursor: pointer;
-  transition: all 0.3s ease;
 }
 
 /* Az aktív (kiválasztott) elem kiemelése */
