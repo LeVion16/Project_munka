@@ -109,6 +109,11 @@ main{
 
 footer{
     margin-top: 10rem;
+    background-color: rgba(31, 28, 28, 0.4);
+    color:#ffdc;
+    padding: 2rem;
+    gap: 2rem;
+
 }
 
 @media (max-width: 500px) {
@@ -147,5 +152,11 @@ footer{
     .card {
         width: 100%;
         max-width: 350px;
+    }
+    .footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 }
