@@ -18,11 +18,11 @@ header{
 }
 
 h1{
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .title{
-    background: rgba(255, 255, 255, 0.1); /* Enyhén áttetsző fehér */
+    background: rgb(255, 255, 255); /* Enyhén áttetsző fehér */
     backdrop-filter: blur(10px);
     border-radius: 5px;
     border: 1px solid rgba(255, 255, 255, 0.1);
